@@ -1,0 +1,26 @@
+{
+  "name": "homebridge-iotas-lock",
+  "version": "0.0.4",
+  "description": "A homebridge plugin to control an IOTAS lock",
+  "main": "index.js",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "author": "steve sample <stevesample@fastmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jwt-decode": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevesample/homebridge-iotas-lock"
+  }
+}
