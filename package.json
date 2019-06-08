@@ -1,6 +1,6 @@
 {
   "name": "homebridge-iotas-lock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A homebridge plugin to control an IOTAS lock",
   "main": "index.js",
   "keywords": [
