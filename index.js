@@ -55,6 +55,8 @@ iotasLock.prototype = {
       getFeature(self.iotasUrl, token, self.featureId).then((res) => {
         let value = res.value; // 0 unlocked, 1 locked, 2 jammed, 3 unknown
         console.log('returning a value of: ' + value + ' for feature state');
+        self.lockService.updateCharacteristic(Characteristic.LockCurrentState, value);
+        self.lockService.updateCharacteristic(Characteristic.LockTargetState, value);
         return next(null, value);
       }).catch((err) => {
         self.log('error turning on');
@@ -73,6 +75,7 @@ iotasLock.prototype = {
       self.token = token; //update token incase it was refreshed
       updateFeature(self.iotasUrl, token, value, self.featureId).then((res) => {
         self.lockService.updateCharacteristic(Characteristic.LockCurrentState, value);
+        self.lockService.updateCharacteristic(Characteristic.LockTargetState, value);
         return next(null, value);
       }).catch((err) => {
         self.log('error controlling lock');
