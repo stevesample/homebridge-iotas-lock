@@ -16,7 +16,7 @@ Configuration sample:
     "accessories": [
         {
             "accessory": "IotasLock",
-            "iotasUrl": "https://api.iotashome.com/v1/api",
+            "iotasUrl": "https://api.iotashome.com/api/v1",
             "name": "Front door lock",
             "featureId": "1234",
             "username": "YOUR IOTAS USERNAME",
